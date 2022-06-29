@@ -26,6 +26,15 @@ int main(){
 
     cout << a.xxx[0] << ", " << a.xxx[1] << ", " << a.xxx[2] << endl;
 
+    cout << b.yx[0] << ", " << b.yx[1] << endl;
+
+    a = b.yx; //okay a = 4,3
+
+    a.yx = b.yx; //okay a = 3,4
+
+    a.yx = b.xxx; //编译错误
+
+    cout << a << endl;
 
     return 0;
 }
